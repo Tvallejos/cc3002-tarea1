@@ -3,7 +3,7 @@ package Interfaces;
 public interface Hitpoints {
 
     void SetHP();
-    void setAlive();
+    void setdead();
     int getHP();
     boolean isAlive();
 }
