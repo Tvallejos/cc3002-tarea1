@@ -1,8 +1,9 @@
 package Interfaces;
 
 public interface Hitpoints {
-    void getHP();
+
     void SetHP();
     void setAlive();
+    int getHP();
     boolean isAlive();
 }
