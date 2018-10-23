@@ -1,6 +1,7 @@
 package Buildings;
 
 import Interfaces.Attacker;
+import abstractClasses.Building;
 
-public class Castle implements Attacker {
+public class Castle extends Building implements Attacker {
 }

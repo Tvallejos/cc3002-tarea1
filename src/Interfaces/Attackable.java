@@ -1,6 +1,7 @@
 package Interfaces;
 
 import Units.*;
+import Buildings.*;
 
 public interface Attackable extends Hitpoints{
     void attackedby(Attacker attacker);
@@ -11,7 +12,6 @@ public interface Attackable extends Hitpoints{
     void attackedbySiege(SiegeUnit su);
     void attackedbyMonk(Monk m);
     void attackedbyVillager(Villager v);
-    void isAlive();
     void multiplier(Attacker attacker);
     void multiplierFromCastle();
     void multiplierFromInfantry();
