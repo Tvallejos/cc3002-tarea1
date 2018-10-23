@@ -1,0 +1,50 @@
+
+interfaces	Hitpoints	
+Listo							void getHP
+Listo							void setHP
+
+
+Interfaz lista	Attackable	implements hitpoints	
+							void attackedby(Attacker attacker)
+							void attackedbyCastle(Castle castle)
+							void attackedbyInfantry(InfantryUnit iu)
+							void attackedbyArcher(ArcherUnit au)
+							void attackedbyCavalry(CavalryUnit cu)
+							void attackedbySiege(SiegeUnit su)
+							void attackedbyMonk(Monk m)
+							void attackedbyVillager(Villager v)
+							void multiplier(Attacker)
+							void multiplierFrom...								
+
+
+	 	Attacker 
+							void Attack(Entity entity)
+							void getAp
+
+Clases		abstract Entity			implements Attackable
+						private HP
+						private maxHP= 2*HP
+						private dead
+
+		abstract Building		extends Entity
+
+		Barrack 			extends Building menos vida que los castillos resiste unidades de ataque, pero menos que castle debil contra siege igual	
+		
+		Castle 				extends Building implements Atacker resiste unidades de ataque debil contra siege
+
+		abstract Unit			extends Entity implements Atacker si hp 0 entonces no puede atacar
+
+		InfantryUnit			extends Unit
+
+		ArcherUnit			extends Unit
+
+		CavalrryUnit			extends Unit
+
+		SiegeUnit			extends Unit fuerte vs todo menos cavalry
+
+		Monk				extends Unit recuperan % solo a unidades, si los ataca any los mata except villager
+
+		Villager			extends Unit recuperan buildings, debiles contra todo excepto otros aldeanos
+
+
+		
