@@ -4,6 +4,7 @@ import Units.*;
 import Buildings.*;
 
 public interface Attackable extends Hitpoints{
+    double getMultiplier(int k);
     void attackedByCastle(Castle castle);
     void attackedByInfantry(InfantryUnit iu);
     void attackedByArcher(ArcherUnit au);
