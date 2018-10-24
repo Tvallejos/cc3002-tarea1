@@ -7,7 +7,7 @@ import abstractClasses.Unit;
 public class ArcherUnit extends Unit {
     private final static int archerHP=30;
     private final static int archerAP=4;
-    private final static double[] ArcherMultipliers= {1.0 , 1.2 , 1.0 , 1.5, 0.8, 0.5, 1.2};
+    private final static double[] ArcherMultipliers= {1.2 , 1.2 , 1.5 , 1.5, 1.0, 0.5, 1.2};
 
     public ArcherUnit(){
         super(this.archerHP,this.archerAP,this.ArcherMultipliers);
