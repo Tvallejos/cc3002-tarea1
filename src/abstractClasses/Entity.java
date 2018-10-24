@@ -1,10 +1,32 @@
 package abstractClasses;
 
+import Buildings.Castle;
 import Interfaces.Attackable;
+import Interfaces.Attacker;
+import Units.*;
 
 public abstract class Entity implements Attackable {
-    private int hitpoints;
-    private boolean alive;
+    private int hp;
+    private boolean alive = true;
 
+    public Entity(int hp){
+        this.hp=hp;
+    }
+
+    // Hitpoints implementation
+    // SETTERS
+    public void setDead() {
+        alive=false;
+    }
+    public void setHP(int newhp) {
+        hp= newhp;
+    }
+    // GETTERS
+    public boolean isAlive(){
+        return alive;
+    }
+    public int getHP() {
+        return hp;
+    }
 
 }
