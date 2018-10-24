@@ -6,12 +6,10 @@ import Interfaces.Attacker;
 public abstract class Unit extends Entity implements Attacker {
     private int AP;
     private int maxHP;
-    private double[] multipliers; // defined as the multiplier if Attacker attacks [index]
-                                  // [Infantry,Archer,Cavalry,Siege,Villager,Monk,Castle,Barracks]
-    public Unit(int unitHP,int unitAP ,double[] multipliers){
+
+    public Unit(int unitHP,int unitAP){
         super(unitHP);
         this.AP=unitAP;
-        this.multipliers=multipliers;
         this.maxHP=2*this.getHP();
     }
 
@@ -22,8 +20,16 @@ public abstract class Unit extends Entity implements Attacker {
     public int getMaxHP(){
         return this.maxHP;
     }
-    public double getMultiplier(int k){
-        return multipliers[k];
+
+    public void getHealedBy(int heal){
+        if(this.isAlive()){
+
+            if(getHP()+heal>getMaxHP()){
+                setHP(getMaxHP());
+            }else{
+                setHP(getHP()+heal);
+            }
+        }
     }
 
 
