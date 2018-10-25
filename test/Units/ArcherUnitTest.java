@@ -69,6 +69,12 @@ class ArcherUnitTest {
         assertEquals(37, archertest.getHP());
     }
 
+    @Test
+    void getHealedBy(){
+        archertest.getHealedBy(140);
+        assertEquals(200,archertest.getHP());
+    }
+
     // can attack every Unit and Building
     @Test
     void attack() {
