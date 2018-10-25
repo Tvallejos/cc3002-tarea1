@@ -5,8 +5,8 @@ import Interfaces.Attackable;
 import abstractClasses.Unit;
 
 public class SiegeUnit extends Unit {
-    private final static int siegeHP = 175;
-    private final static int siegeAP = 2;
+    private final static int siegeHP = 400;
+    private final static int siegeAP = 15;
 
 
     public SiegeUnit(){

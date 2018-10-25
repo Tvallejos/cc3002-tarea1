@@ -17,6 +17,7 @@ public abstract class Entity implements Attackable {
     // SETTERS
     public void setDead() {
         alive = false;
+        setHP(0);
     }
 
     public void setHP(int newhp) {
@@ -36,7 +37,6 @@ public abstract class Entity implements Attackable {
         if (isAlive()) {
             if (getHP() - dmg <= 0) {
                 setDead();
-                setHP(0);
             } else setHP(getHP() - dmg);
         }
     }

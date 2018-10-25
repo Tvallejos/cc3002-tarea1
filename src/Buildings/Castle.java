@@ -9,7 +9,7 @@ public class Castle extends Building implements Attacker {
     private int AP;
 
     private final static int castleHP = 4800;
-    private final static int castleAP = 11;
+    private final static int castleAP = 13;
 
 
     public Castle(){

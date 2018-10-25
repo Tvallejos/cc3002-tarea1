@@ -5,8 +5,8 @@ import Interfaces.Attackable;
 import abstractClasses.Unit;
 
 public class Villager extends Unit {
-    private final static int villagerHP = 25;
-    private final static int villagerAP = 3;
+    private final static int villagerHP = 100;
+    private final static int villagerAP = 10;
 
     public Villager(){
         super(villagerHP,villagerAP);

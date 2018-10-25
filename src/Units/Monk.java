@@ -5,8 +5,8 @@ import Interfaces.Attackable;
 import abstractClasses.Unit;
 
 public class Monk extends Unit {
-    private final static int monkHP = 30;
-    private final static int monkAP = 6;
+    private final static int monkHP = 100;
+    private final static int monkAP = 10;
 
 
     public Monk(){

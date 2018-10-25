@@ -5,8 +5,8 @@ import Interfaces.Attackable;
 import abstractClasses.Unit;
 
 public class InfantryUnit extends Unit {
-    private final static int infantryHP = 45;
-    private final static int infantryAP = 6;
+    private final static int infantryHP = 150;
+    private final static int infantryAP = 14;
 
 
     public InfantryUnit(){

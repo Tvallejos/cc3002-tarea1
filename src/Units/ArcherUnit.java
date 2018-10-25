@@ -5,8 +5,8 @@ import Interfaces.Attackable;
 import abstractClasses.Unit;
 
 public class ArcherUnit extends Unit {
-    private final static int archerHP=30;
-    private final static int archerAP=4;
+    private final static int archerHP=100;
+    private final static int archerAP=12;
 
     public ArcherUnit(){
         super(archerHP,archerAP);
