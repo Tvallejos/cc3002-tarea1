@@ -84,14 +84,14 @@ public class SiegeUnitTest {
         siegetest.attack(castle);
         siegetest.attack(barrack);
 
-        int expectedDmgToInfantry = (int) 1.5 * 15;
-        int expectedDmgToArcher = (int) 1.5 * 15;
-        int expectedDmgToCavalry = (int) 1.0 * 15;
-        int expectedDmgToSiege = (int) 1.5 * 15;
-        int expectedDmgToVillager = (int) 1.5 * 15;
+        int expectedDmgToInfantry = (int) (1.5 * 15);
+        int expectedDmgToArcher = (int) (1.5 * 15);
+        int expectedDmgToCavalry = (int) (1.0 * 15);
+        int expectedDmgToSiege = (int) (1.5 * 15);
+        int expectedDmgToVillager = (int) (1.5 * 15);
         // monk must be dead;
-        int expectedDmgToCastle = (int) 2.0 * 15;
-        int expectedDmgToBarrack = (int) 2.0 * 15;
+        int expectedDmgToCastle = (int) (2.0 * 15);
+        int expectedDmgToBarrack = (int) (2.0 * 15);
 
         assertEquals(150 - expectedDmgToInfantry, infantry.getHP());
         assertEquals(100 - expectedDmgToArcher, archer.getHP());

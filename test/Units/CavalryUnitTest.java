@@ -84,14 +84,14 @@ class CavalryUnitTest {
         cavalrytest.attack(castle);
         cavalrytest.attack(barrack);
 
-        int expectedDmgToInfantry = (int) 1.0 * 16;
-        int expectedDmgToArcher = (int) 1.5 * 16;
-        int expectedDmgToCavalry = (int) 1.0 * 16;
-        int expectedDmgToSiege = (int) 1.2 * 16;
-        int expectedDmgToVillager = (int) 1.5 * 16;
+        int expectedDmgToInfantry = (int) (1.0 * 16);
+        int expectedDmgToArcher = (int) (1.5 * 16);
+        int expectedDmgToCavalry = (int) (1.0 * 16);
+        int expectedDmgToSiege = (int) (1.2 * 16);
+        int expectedDmgToVillager = (int) (1.5 * 16);
         // monk must be dead;
-        int expectedDmgToCastle = (int) 0.3 * 16;
-        int expectedDmgToBarrack = (int) 0.7 * 16;
+        int expectedDmgToCastle = (int) (0.3 * 16);
+        int expectedDmgToBarrack = (int) (0.7 * 16);
 
         assertEquals(150 - expectedDmgToInfantry, infantry.getHP());
         assertEquals(100 - expectedDmgToArcher, archer.getHP());
