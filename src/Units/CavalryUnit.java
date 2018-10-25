@@ -91,7 +91,7 @@ public class CavalryUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if Cavalry is attacked
+     * specific heal and multiplier is done if Cavalry is attacked
      * by monks
      * @param M The Monk which performs the heal
      */

@@ -91,7 +91,7 @@ public class ArcherUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if archer is attacked
+     * specific heal and multiplier is done if archer is attacked
      * by monks
      * @param M The Monk which performs the heal
      */
