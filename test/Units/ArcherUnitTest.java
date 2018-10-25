@@ -21,9 +21,6 @@ class ArcherUnitTest {
     private Building barrack;
     private Building castle;
 
-    private int initialHP = 30;
-    private int AP = 4;
-
     @BeforeEach
     void setUp() {
         archertest = new ArcherUnit();
