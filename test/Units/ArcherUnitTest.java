@@ -3,6 +3,7 @@ package Units;
 import Buildings.Barrack;
 import Buildings.Castle;
 import abstractClasses.Building;
+import abstractClasses.Entity;
 import abstractClasses.Unit;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
