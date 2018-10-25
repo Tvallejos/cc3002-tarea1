@@ -1,11 +1,10 @@
+package abstractClasses;
+import Interfaces.Attacker;
+
 /**
  * Abstract class for attacker units
  * @author Tomas Vallejos
  */
-package abstractClasses;
-
-import Interfaces.Attacker;
-
 public abstract class Unit extends Entity implements Attacker {
     /**
      * represents the Attack Power of the unit
@@ -54,7 +53,6 @@ public abstract class Unit extends Entity implements Attacker {
      */
     public void getHealedBy(int heal){
         if(this.isAlive()){
-
             if(getHP()+heal>getMaxHP()){
                 setHP(getMaxHP());
             }else{
@@ -62,7 +60,4 @@ public abstract class Unit extends Entity implements Attacker {
             }
         }
     }
-
-
-
 }
