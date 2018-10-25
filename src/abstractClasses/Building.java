@@ -1,5 +1,8 @@
 /**
  * Building abstract class for attackable buildings
+ * if another apart from castle is an attacker building
+ * an attackerBuilding abstract class must be created
+ * and refactor castle methods
  * @author Tomas Vallejos
  */
 package abstractClasses;
