@@ -34,7 +34,7 @@ public class InfantryUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if Infantry is attacked
+     * specific damage and multiplier is applied if Infantry is attacked
      * by infantry Units
      * @param IU the Infantry Unit which performs the attack
      */
@@ -45,7 +45,7 @@ public class InfantryUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if Infantry is attacked
+     * specific damage and multiplier is applied if Infantry is attacked
      * by archer Units
      * @param AU the Archer Unit which performs the attack
      */
@@ -56,7 +56,7 @@ public class InfantryUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if Infantry is attacked
+     * specific damage and multiplier is applied if Infantry is attacked
      * by Cavalry Units
      * @param CU the Cavalry Unit which performs the attack
      */
@@ -67,7 +67,7 @@ public class InfantryUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if Infantry is attacked
+     * specific damage and multiplier is applied if Infantry is attacked
      * by Siege Units
      * @param SU The Siege Unit which performs the attack
      */
@@ -78,7 +78,7 @@ public class InfantryUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if Infantry is attacked
+     * specific damage and multiplier is applied if Infantry is attacked
      * by Villagers
      * @param V the Villager which performs the attack
      */
@@ -89,7 +89,7 @@ public class InfantryUnit extends Unit {
     }
 
     /**
-     * specific heal and multiplier is done if Infantry is attacked
+     * specific heal and multiplier is applied if Infantry is attacked
      * by monks
      * @param M The Monk which performs the heal
      */
@@ -100,7 +100,7 @@ public class InfantryUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if Infantry is attacked
+     * specific damage and multiplier is applied if Infantry is attacked
      * by castles
      * @param castle The Castle which performs the attack
      */

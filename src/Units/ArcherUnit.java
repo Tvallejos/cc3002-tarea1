@@ -58,7 +58,7 @@ public class ArcherUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if archer is attacked
+     * specific damage and multiplier is applied if archer is attacked
      * by Cavalry Units
      * @param CU the Cavalry Unit which performs the attack
      */
@@ -69,7 +69,7 @@ public class ArcherUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if archer is attacked
+     * specific damage and multiplier is applied if archer is attacked
      * by Siege Units
      * @param SU The Siege Unit which performs the attack
      */
@@ -80,7 +80,7 @@ public class ArcherUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if archer is attacked
+     * specific damage and multiplier is applied if archer is attacked
      * by Villagers
      * @param V the Villager which performs the attack
      */
@@ -91,7 +91,7 @@ public class ArcherUnit extends Unit {
     }
 
     /**
-     * specific heal and multiplier is done if archer is attacked
+     * specific heal and multiplier is applied if archer is attacked
      * by monks
      * @param M The Monk which performs the heal
      */
@@ -102,7 +102,7 @@ public class ArcherUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is done if archer is attacked
+     * specific damage and multiplier is applied if archer is attacked
      * by Castles
      * @param castle The Castle which performs the attack
      */
