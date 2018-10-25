@@ -87,7 +87,6 @@ class VillagerTest {
         int expectedDmgToCavalry = (int) (0.5 * 10);
         int expectedHealToSiege = (int) (0.5 * 10);
         int expectedDmgToVillager = (int) (1.0 * 10);
-        int expectedDmgToMonk = 0;
         int expectedRepairToCastle = (int) (0.3 * 10);
         int expectedRepairToBarrack = (int) (0.7 * 10);
 
@@ -97,12 +96,11 @@ class VillagerTest {
         assertEquals(400 + expectedHealToSiege, siege.getHP());
 
         assertEquals(100 - expectedDmgToVillager, villager.getHP());
+        // monk alive and undamaged
         assertTrue((monk.isAlive()) && (100 == monk.getHP()));
         //Villager can not repair a full hp building
         assertEquals(4800 , castle.getHP());
         assertEquals(1200 , barrack.getHP());
-
-
 
         castle.setHP(100);
         barrack.setHP(100);
@@ -111,8 +109,6 @@ class VillagerTest {
 
         assertEquals(100+expectedRepairToCastle , castle.getHP());
         assertEquals(100+expectedRepairToBarrack , barrack.getHP());
-
-
 
         // dont attack if is dead
         villagertest.setDead();
@@ -136,7 +132,5 @@ class VillagerTest {
         assertTrue((monk.isAlive()) && (100 == monk.getHP()));
         assertEquals(100 + expectedRepairToCastle, castle.getHP());
         assertEquals(100 + expectedRepairToBarrack, barrack.getHP());
-
-
     }
 }

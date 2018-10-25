@@ -3,7 +3,6 @@ package Units;
 import Buildings.Barrack;
 import Buildings.Castle;
 import abstractClasses.Building;
-import abstractClasses.Entity;
 import abstractClasses.Unit;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -128,37 +127,5 @@ class ArcherUnitTest {
         assertEquals(4800 - expectedDmgToCastle, castle.getHP());
         assertEquals(1200 - expectedDmgToBarrack, barrack.getHP());
 
-
-
     }
-/*
-    @Test
-    void attackedByInfantry() {
-
-    }
-
-    @Test
-    void attackedByArcher() {
-    }
-
-    @Test
-    void attackedByCavalry() {
-    }
-
-    @Test
-    void attackedBySiege() {
-    }
-
-    @Test
-    void attackedByVillager() {
-    }
-
-    @Test
-    void attackedByMonk() {
-    }
-
-    @Test
-    void attackedByCastle() {
-    }
-*/
 }
