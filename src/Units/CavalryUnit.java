@@ -20,31 +20,31 @@ public class CavalryUnit extends Unit {
 
     @Override
     public void attackedByInfantry(InfantryUnit IU) {
-        int dmg = (int) 1.2*IU.getAP();
+        int dmg = (int) (1.2*IU.getAP());
         this.getDamagedBy(dmg);
     }
 
     @Override
     public void attackedByArcher(ArcherUnit AU) {
-        int dmg = (int) 1.0*AU.getAP();
+        int dmg = (int) (1.0*AU.getAP());
         this.getDamagedBy(dmg);
     }
 
     @Override
     public void attackedByCavalry(CavalryUnit CU) {
-        int dmg = (int) 1.0*CU.getAP();
+        int dmg = (int) (1.0*CU.getAP());
         this.getDamagedBy(dmg);
     }
 
     @Override
     public void attackedBySiege(SiegeUnit SU) {
-        int dmg = (int) 1.0*SU.getAP();
+        int dmg = (int) (1.0*SU.getAP());
         this.getDamagedBy(dmg);
     }
 
     @Override
     public void attackedByVillager(Villager V) {
-        int dmg = (int) 0.5*V.getAP();
+        int dmg = (int) (0.5*V.getAP());
         this.getDamagedBy(dmg);
     }
 
@@ -56,7 +56,7 @@ public class CavalryUnit extends Unit {
 
     @Override
     public void attackedByCastle(Castle castle) {
-        int dmg = (int) 1.2*castle.getAP();
+        int dmg = (int) (1.2*castle.getAP());
         this.getDamagedBy(dmg);
     }
 }

@@ -11,7 +11,7 @@ public abstract class Building extends Entity {
     }
     public void getRepairedby(int repair){
         if(this.isAlive()){
-            if(getHP()+repair>getFullhp()){
+            if(getHP()+repair>=getFullhp()){
                 setHP(getFullhp());
             }else{
                 setHP(getHP()+repair);
