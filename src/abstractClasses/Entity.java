@@ -1,10 +1,10 @@
+package abstractClasses;
+import Interfaces.Attackable;
+
 /**
  * Abstract class for attackable Objects
  * @author Tomas Vallejos
  */
-package abstractClasses;
-import Interfaces.Attackable;
-
 public abstract class Entity implements Attackable {
 
     /**

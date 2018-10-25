@@ -1,3 +1,5 @@
+package abstractClasses;
+
 /**
  * Building abstract class for attackable buildings
  * if another apart from castle is an attacker building
@@ -5,8 +7,6 @@
  * and refactor castle methods
  * @author Tomas Vallejos
  */
-package abstractClasses;
-
 public abstract class Building extends Entity {
 
     /**
