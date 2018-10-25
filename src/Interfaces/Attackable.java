@@ -1,11 +1,11 @@
-/**
- * All methods to be attacked by attackers
- * @author Tomas Vallejos
- */
 package Interfaces;
 import Units.*;
 import Buildings.*;
 
+/**
+ * All methods to be attacked by attackers
+ * @author Tomas Vallejos
+ */
 public interface Attackable extends Hitpoints{
     /**
      * The Object take damage from an Infantry Unit

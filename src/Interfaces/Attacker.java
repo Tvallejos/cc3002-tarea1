@@ -1,9 +1,9 @@
+package Interfaces;
+
 /**
  * All methods for attacker Units
  * @author Tomas Vallejos
  */
-package Interfaces;
-
 public interface Attacker extends Attackable {
     /**
      * The Object attacks another Object which implements Attackable

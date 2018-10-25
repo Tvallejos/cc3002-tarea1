@@ -1,9 +1,9 @@
+package Interfaces;
+
 /**
  * Hitpoints interface
  * @author: Tomas Vallejos
  */
-package Interfaces;
-
 public interface Hitpoints {
     /**
      * Sets the new HP for the Object
