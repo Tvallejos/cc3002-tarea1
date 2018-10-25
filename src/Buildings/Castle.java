@@ -61,7 +61,7 @@ public class Castle extends Building implements Attacker {
 
     @Override
     public void attackedByCastle(Castle castle) {
-        int dmg = (int) 0.1*castle.getAP();
+        int dmg = (int) (0.1*castle.getAP());
         this.getDamagedBy(dmg);
     }
 
