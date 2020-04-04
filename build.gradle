@@ -61,9 +61,3 @@ test {
   }
 }
 
-task Init {
-  doLast {
-    println 'Init build'
-  }
-}
-
