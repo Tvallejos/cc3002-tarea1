@@ -1,12 +1,12 @@
-package Interfaces;
-import Units.*;
-import Buildings.*;
+package Entity;
+import Entity.Units.*;
+import Entity.Buildings.*;
 
 /**
  * All methods to be attacked by attackers
  * @author Tomas Vallejos
  */
-public interface Attackable extends Hitpoints{
+public interface Attackable extends Hitpoints {
     /**
      * The Object take damage from an Infantry Unit
      * @param IU the Infantry Unit which performs the attack

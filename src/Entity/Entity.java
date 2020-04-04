@@ -1,5 +1,4 @@
-package abstractClasses;
-import Interfaces.Attackable;
+package Entity;
 
 /**
  * Abstract class for attackable Objects

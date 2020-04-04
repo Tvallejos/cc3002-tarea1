@@ -1,9 +1,8 @@
-package Units;
+package Entity.Units;
 
-import Buildings.Barrack;
-import Buildings.Castle;
-import abstractClasses.Building;
-import abstractClasses.Unit;
+import Entity.Buildings.Barrack;
+import Entity.Buildings.Castle;
+import Entity.Buildings.Building;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

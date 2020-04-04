@@ -1,54 +1,51 @@
-package Units;
+package Entity.Units;
 
-import Buildings.Castle;
-import Interfaces.Attackable;
-import abstractClasses.Unit;
+import Entity.Buildings.Castle;
+import Entity.Attackable;
 
 /**
- * Archer class
+ * Infantry Unit Class
  * @author Tomas Vallejos
  */
-public class ArcherUnit extends Unit {
+public class InfantryUnit extends Unit {
     /**
-     * variable which represents the initial archer's hitpoints
+     * variable which represents the infantry's initial hitpoints
      */
-    private final static int archerHP=100;
+    private final static int infantryHP = 150;
     /**
-     * variable which represents the initial archer's attack power
+     * variable which represents infantry's attack power
      */
-    private final static int archerAP=12;
+    private final static int infantryAP = 14;
 
     /**
-     * Archer constructor calls Unit Constructor
+     * Infantries Constructor calls Unit constructor
      */
-    public ArcherUnit(){
-        super(archerHP,archerAP);
+    public InfantryUnit(){
+        super(infantryHP,infantryAP);
     }
 
     /**
-     * if archer attacks the attacked Entity reacts as attacked by archer
+     * if infantry attacks the Entity reacts as being attacked by infantry
      * @param Attacked the Object whos attacked
      */
-    public void attack(Attackable Attacked){
-        if(this.isAlive()){
-            Attacked.attackedByArcher(this);
-        }
+    public void attack(Attackable Attacked) {
+        if(isAlive()){Attacked.attackedByInfantry(this);}
     }
 
     /**
-     * specific damage and multiplier is applied if archer is attacked
-     * by infantry Units
+     * specific damage and multiplier is applied if Infantry is attacked
+     * by infantry Entity.Units
      * @param IU the Infantry Unit which performs the attack
      */
     @Override
     public void attackedByInfantry(InfantryUnit IU) {
-        int dmg = (int) (1.2*IU.getAP());
+        int dmg = (int) (1.0*IU.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific damage and multiplier is applied if archer is attacked
-     * by Archer Units
+     * specific damage and multiplier is applied if Infantry is attacked
+     * by archer Entity.Units
      * @param AU the Archer Unit which performs the attack
      */
     @Override
@@ -58,19 +55,19 @@ public class ArcherUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is applied if archer is attacked
-     * by Cavalry Units
+     * specific damage and multiplier is applied if Infantry is attacked
+     * by Cavalry Entity.Units
      * @param CU the Cavalry Unit which performs the attack
      */
     @Override
     public void attackedByCavalry(CavalryUnit CU) {
-        int dmg = (int) (1.5*CU.getAP());
+        int dmg = (int) (1.0*CU.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific damage and multiplier is applied if archer is attacked
-     * by Siege Units
+     * specific damage and multiplier is applied if Infantry is attacked
+     * by Siege Entity.Units
      * @param SU The Siege Unit which performs the attack
      */
     @Override
@@ -80,18 +77,18 @@ public class ArcherUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is applied if archer is attacked
+     * specific damage and multiplier is applied if Infantry is attacked
      * by Villagers
      * @param V the Villager which performs the attack
      */
     @Override
     public void attackedByVillager(Villager V) {
-        int dmg = (int) (1.0*V.getAP());
+        int dmg = (int) (0.8*V.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific heal and multiplier is applied if archer is attacked
+     * specific heal and multiplier is applied if Infantry is attacked
      * by monks
      * @param M The Monk which performs the heal
      */
@@ -102,8 +99,8 @@ public class ArcherUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is applied if archer is attacked
-     * by Castles
+     * specific damage and multiplier is applied if Infantry is attacked
+     * by castles
      * @param castle The Castle which performs the attack
      */
     @Override
@@ -111,5 +108,6 @@ public class ArcherUnit extends Unit {
         int dmg = (int) (1.2*castle.getAP());
         this.getDamagedBy(dmg);
     }
+
 
 }

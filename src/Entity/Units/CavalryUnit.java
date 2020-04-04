@@ -1,63 +1,64 @@
-package Units;
+package Entity.Units;
 
-import Buildings.Castle;
-import Interfaces.Attackable;
-import abstractClasses.Unit;
+import Entity.Buildings.Castle;
+import Entity.Attackable;
 
 /**
- * Infantry Unit Class
+ * Cavalry Unit Class
  * @author Tomas Vallejos
  */
-public class InfantryUnit extends Unit {
+public class CavalryUnit extends Unit {
     /**
-     * variable which represents the infantry's initial hitpoints
+     * variable which represents the cavalry initial hitpoints
      */
-    private final static int infantryHP = 150;
+    private final static int cavalryHP = 200;
     /**
-     * variable which represents infantry's attack power
+     * variable which represents calvarry attack power
      */
-    private final static int infantryAP = 14;
+    private final static int cavalryAP = 16;
 
     /**
-     * Infantries Constructor calls Unit constructor
+     * Cavalry Constructor calls Unit Constructor
      */
-    public InfantryUnit(){
-        super(infantryHP,infantryAP);
+    public CavalryUnit() {
+        super(cavalryHP,cavalryAP);
     }
 
     /**
-     * if infantry attacks the Entity reacts as being attacked by infantry
+     * if Cavalry attacks, the attacked entity reacts as attacked by Cavalry
      * @param Attacked the Object whos attacked
      */
     public void attack(Attackable Attacked) {
-        if(isAlive()){Attacked.attackedByInfantry(this);}
+        if (this.isAlive()) {
+            Attacked.attackedByCavalry(this);
+        }
     }
 
     /**
-     * specific damage and multiplier is applied if Infantry is attacked
-     * by infantry Units
+     * specific damage and multiplier is applied if Cavalry is attacked
+     * by infantry Entity.Units
      * @param IU the Infantry Unit which performs the attack
      */
     @Override
     public void attackedByInfantry(InfantryUnit IU) {
-        int dmg = (int) (1.0*IU.getAP());
+        int dmg = (int) (1.2*IU.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific damage and multiplier is applied if Infantry is attacked
-     * by archer Units
+     * specific damage and multiplier is applied if Cavalry is attacked
+     * by archer Entity.Units
      * @param AU the Archer Unit which performs the attack
      */
     @Override
     public void attackedByArcher(ArcherUnit AU) {
-        int dmg = (int) (1.2*AU.getAP());
+        int dmg = (int) (1.0*AU.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific damage and multiplier is applied if Infantry is attacked
-     * by Cavalry Units
+     * specific damage and multiplier is applied if Cavalry is attacked
+     * by Cavalry Entity.Units
      * @param CU the Cavalry Unit which performs the attack
      */
     @Override
@@ -67,29 +68,29 @@ public class InfantryUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is applied if Infantry is attacked
-     * by Siege Units
+     * specific damage and multiplier is applied if Cavalry is attacked
+     * by Siege Entity.Units
      * @param SU The Siege Unit which performs the attack
      */
     @Override
     public void attackedBySiege(SiegeUnit SU) {
-        int dmg = (int) (1.5*SU.getAP());
+        int dmg = (int) (1.0*SU.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific damage and multiplier is applied if Infantry is attacked
+     * specific damage and multiplier is applied if Cavalry is attacked
      * by Villagers
      * @param V the Villager which performs the attack
      */
     @Override
     public void attackedByVillager(Villager V) {
-        int dmg = (int) (0.8*V.getAP());
+        int dmg = (int) (0.5*V.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific heal and multiplier is applied if Infantry is attacked
+     * specific heal and multiplier is applied if Cavalry is attacked
      * by monks
      * @param M The Monk which performs the heal
      */
@@ -100,7 +101,7 @@ public class InfantryUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is applied if Infantry is attacked
+     * specific damage and multiplier is applied if Cavalry is attacked
      * by castles
      * @param castle The Castle which performs the attack
      */
@@ -109,6 +110,4 @@ public class InfantryUnit extends Unit {
         int dmg = (int) (1.2*castle.getAP());
         this.getDamagedBy(dmg);
     }
-
-
 }

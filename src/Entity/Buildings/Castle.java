@@ -1,9 +1,8 @@
-package Buildings;
+package Entity.Buildings;
 
-import Interfaces.Attackable;
-import Interfaces.Attacker;
-import Units.*;
-import abstractClasses.Building;
+import Entity.Attackable;
+import Entity.Attacker;
+import Entity.Units.*;
 
 public class Castle extends Building implements Attacker {
     private int AP;

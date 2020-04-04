@@ -1,5 +1,6 @@
-package abstractClasses;
-import Interfaces.Attacker;
+package Entity.Units;
+import Entity.Attacker;
+import Entity.Entity;
 
 /**
  * Abstract class for attacker units
@@ -48,7 +49,7 @@ public abstract class Unit extends Entity implements Attacker {
     /**
      * Unit exclusive method
      * Heals Unit's hitpoints by an amount,
-     * Units cant be healed over its maxHP
+     * Entity.Units cant be healed over its maxHP
      * @param heal healing amount
      */
     public void getHealedBy(int heal){

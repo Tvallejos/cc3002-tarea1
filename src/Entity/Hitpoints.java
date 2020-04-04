@@ -1,4 +1,4 @@
-package Interfaces;
+package Entity;
 
 /**
  * Hitpoints interface

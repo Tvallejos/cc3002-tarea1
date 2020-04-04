@@ -1,7 +1,7 @@
-package Interfaces;
+package Entity;
 
 /**
- * All methods for attacker Units
+ * All methods for attacker Entity.Units
  * @author Tomas Vallejos
  */
 public interface Attacker extends Attackable {

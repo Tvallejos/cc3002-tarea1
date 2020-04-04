@@ -1,7 +1,6 @@
-package Buildings;
+package Entity.Buildings;
 
-import Units.*;
-import abstractClasses.Building;
+import Entity.Units.*;
 
 public class Barrack extends Building {
     private final static int barrackHP=1200;

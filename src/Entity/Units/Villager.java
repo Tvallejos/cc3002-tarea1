@@ -1,98 +1,91 @@
-package Units;
+package Entity.Units;
 
-import Buildings.Castle;
-import Interfaces.Attackable;
-import abstractClasses.Unit;
+import Entity.Buildings.Castle;
+import Entity.Attackable;
 
 /**
- * Cavalry Unit Class
+ * Villager class
  * @author Tomas Vallejos
  */
-public class CavalryUnit extends Unit {
-    /**
-     * variable which represents the cavalry initial hitpoints
-     */
-    private final static int cavalryHP = 200;
-    /**
-     * variable which represents calvarry attack power
-     */
-    private final static int cavalryAP = 16;
+public class Villager extends Unit {
+    private final static int villagerHP = 100;
+    private final static int villagerAP = 10;
 
     /**
-     * Cavalry Constructor calls Unit Constructor
+     * Villager constructor calls Unit Constructor
      */
-    public CavalryUnit() {
-        super(cavalryHP,cavalryAP);
+    public Villager(){
+        super(villagerHP,villagerAP);
     }
 
     /**
-     * if Cavalry attacks, the attacked entity reacts as attacked by Cavalry
+     * if villager attack the attacked react as attacked by villager
      * @param Attacked the Object whos attacked
      */
     public void attack(Attackable Attacked) {
         if (this.isAlive()) {
-            Attacked.attackedByCavalry(this);
+            Attacked.attackedByVillager(this);
         }
     }
 
     /**
-     * specific damage and multiplier is applied if Cavalry is attacked
-     * by infantry Units
+     * specific damage and multiplier is applied if Villagers are attacked
+     * by Infantry Entity.Units
      * @param IU the Infantry Unit which performs the attack
      */
     @Override
     public void attackedByInfantry(InfantryUnit IU) {
-        int dmg = (int) (1.2*IU.getAP());
+        int dmg = (int) (1.5*IU.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific damage and multiplier is applied if Cavalry is attacked
-     * by archer Units
+     * specific damage and multiplier is applied if Villagers are attacked
+     * by Archer Entity.Units
      * @param AU the Archer Unit which performs the attack
      */
     @Override
     public void attackedByArcher(ArcherUnit AU) {
-        int dmg = (int) (1.0*AU.getAP());
+        int dmg = (int) (1.5*AU.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific damage and multiplier is applied if Cavalry is attacked
-     * by Cavalry Units
+     * specific damage and multiplier is applied if Villagers are attacked
+     * by Cavalry Entity.Units
      * @param CU the Cavalry Unit which performs the attack
      */
     @Override
     public void attackedByCavalry(CavalryUnit CU) {
-        int dmg = (int) (1.0*CU.getAP());
+        int dmg = (int) (1.5*CU.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific damage and multiplier is applied if Cavalry is attacked
-     * by Siege Units
+     * specific damage and multiplier is applied if Villagers are attacked
+     * by Siege Entity.Units
      * @param SU The Siege Unit which performs the attack
      */
     @Override
     public void attackedBySiege(SiegeUnit SU) {
-        int dmg = (int) (1.0*SU.getAP());
+        int dmg = (int) (1.5*SU.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific damage and multiplier is applied if Cavalry is attacked
+     * specific damage and multiplier is applied if Villagers are attacked
      * by Villagers
      * @param V the Villager which performs the attack
      */
     @Override
     public void attackedByVillager(Villager V) {
-        int dmg = (int) (0.5*V.getAP());
+        int dmg = (int) (1.0*V.getAP());
         this.getDamagedBy(dmg);
     }
 
     /**
-     * specific heal and multiplier is applied if Cavalry is attacked
-     * by monks
+     * specific heal and multiplier is applied if Villagers are
+     * healed by monks
      * @param M The Monk which performs the heal
      */
     @Override
@@ -102,7 +95,7 @@ public class CavalryUnit extends Unit {
     }
 
     /**
-     * specific damage and multiplier is applied if Cavalry is attacked
+     * specific damage and multiplier is applied if Villagers are attacked
      * by castles
      * @param castle The Castle which performs the attack
      */

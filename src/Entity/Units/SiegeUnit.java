@@ -1,8 +1,7 @@
-package Units;
+package Entity.Units;
 
-import Buildings.Castle;
-import Interfaces.Attackable;
-import abstractClasses.Unit;
+import Entity.Buildings.Castle;
+import Entity.Attackable;
 
 /**
  * Siege Unit class
@@ -37,7 +36,7 @@ public class SiegeUnit extends Unit {
 
     /**
      * specific damage and multiplier is applied if Siege is attacked
-     * by Infantry Units
+     * by Infantry Entity.Units
      * @param IU the Infantry Unit which performs the attack
      */
     @Override
@@ -48,7 +47,7 @@ public class SiegeUnit extends Unit {
 
     /**
      * specific damage and multiplier is applied if Siege is attacked
-     * by Archer Units
+     * by Archer Entity.Units
      * @param AU the Archer Unit which performs the attack
      */
     @Override
@@ -59,7 +58,7 @@ public class SiegeUnit extends Unit {
 
     /**
      * specific damage and multiplier is applied if Siege is attacked
-     * by Cavalry Units
+     * by Cavalry Entity.Units
      * @param CU the Cavalry Unit which performs the attack
      */
     @Override
@@ -70,7 +69,7 @@ public class SiegeUnit extends Unit {
 
     /**
      * specific damage and multiplier is applied if Siege is attacked
-     * by Siege Units
+     * by Siege Entity.Units
      * @param SU The Siege Unit which performs the attack
      */
     @Override

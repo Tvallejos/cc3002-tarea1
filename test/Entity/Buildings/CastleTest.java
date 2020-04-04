@@ -1,8 +1,7 @@
-package Buildings;
+package Entity.Buildings;
 
-import Units.*;
-import abstractClasses.Building;
-import abstractClasses.Unit;
+import Entity.Units.*;
+import Entity.Units.Unit;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

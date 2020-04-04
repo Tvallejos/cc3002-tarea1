@@ -1,8 +1,7 @@
-package Units;
+package Entity.Units;
 
-import Buildings.Castle;
-import Interfaces.Attackable;
-import abstractClasses.Unit;
+import Entity.Buildings.Castle;
+import Entity.Attackable;
 
 /**
  * Monk class
@@ -57,7 +56,7 @@ public class Monk extends Unit {
     }
 
     /**
-     * cavalry Units kills instantly monks
+     * cavalry Entity.Units kills instantly monks
      * @param CU the Cavalry Unit which performs the attack
      */
     @Override
@@ -67,7 +66,7 @@ public class Monk extends Unit {
     }
 
     /**
-     * Siege Units instantly kills monks
+     * Siege Entity.Units instantly kills monks
      * @param SU The Siege Unit which performs the attack
      */
     @Override

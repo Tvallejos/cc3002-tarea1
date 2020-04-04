@@ -1,16 +1,15 @@
-package Units;
+package Entity.Units;
 
-import Buildings.Barrack;
-import Buildings.Castle;
-import abstractClasses.Building;
-import abstractClasses.Unit;
+import Entity.Buildings.Barrack;
+import Entity.Buildings.Castle;
+import Entity.Buildings.Building;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class InfantryUnitTest {
-    private Unit infantrytest;
+class ArcherUnitTest {
+    private Unit archertest;
     private Unit infantry;
     private Unit calvary;
     private Unit archer;
@@ -20,11 +19,10 @@ class InfantryUnitTest {
 
     private Building barrack;
     private Building castle;
-    
 
     @BeforeEach
     void setUp() {
-        infantrytest = new InfantryUnit();
+        archertest = new ArcherUnit();
         infantry = new InfantryUnit();
         calvary = new CavalryUnit();
         archer = new ArcherUnit();
@@ -35,61 +33,68 @@ class InfantryUnitTest {
         castle = new Castle();
         barrack = new Barrack();
     }
+
     //getters test
     @Test
     void getHP() {
-        assertEquals(150, infantrytest.getHP());
+        assertEquals(100, archertest.getHP());
     }
 
     @Test
     void getMaxHP() {
-        assertEquals(300, infantrytest.getMaxHP());
+        assertEquals(200, archertest.getMaxHP());
     }
 
     @Test
     void getAP() {
-        assertEquals(14, infantrytest.getAP());
+        assertEquals(12, archertest.getAP());
     }
 
     @Test
     void isAlive() {
-        assertTrue(infantrytest.isAlive());
+        assertTrue(archertest.isAlive());
     }
 
     @Test
     void setDead() {
-        infantrytest.setDead();
-        assertTrue(!infantrytest.isAlive());
-        assertEquals(0, infantrytest.getHP());
+        archertest.setDead();
+        assertTrue(!archertest.isAlive());
+        assertEquals(0, archertest.getHP());
     }
 
     @Test
     void setHP() {
-        infantrytest.setHP(37);
-        assertEquals(37, infantrytest.getHP());
+        archertest.setHP(37);
+        assertEquals(37, archertest.getHP());
+    }
+
+    @Test
+    void getHealedBy(){
+        archertest.getHealedBy(140);
+        assertEquals(200,archertest.getHP());
     }
 
     // can attack every Unit and Building
     @Test
     void attack() {
-        infantrytest.attack(infantry);
-        infantrytest.attack(archer);
-        infantrytest.attack(calvary);
-        infantrytest.attack(siege);
-        infantrytest.attack(villager);
-        infantrytest.attack(monk);
+        archertest.attack(infantry);
+        archertest.attack(archer);
+        archertest.attack(calvary);
+        archertest.attack(siege);
+        archertest.attack(villager);
+        archertest.attack(monk);
 
-        infantrytest.attack(castle);
-        infantrytest.attack(barrack);
+        archertest.attack(castle);
+        archertest.attack(barrack);
 
-        int expectedDmgToInfantry = (int) (1.0 * 14);
-        int expectedDmgToArcher = (int) (1.2 * 14);
-        int expectedDmgToCavalry = (int) (1.2 * 14);
-        int expectedDmgToSiege = (int) (1.2 * 14);
-        int expectedDmgToVillager = (int) (1.5 * 14);
+        int expectedDmgToInfantry = (int) (1.2 * 12);
+        int expectedDmgToArcher = (int) (1.2 * 12);
+        int expectedDmgToCavalry = (int) (1.0 * 12);
+        int expectedDmgToSiege = (int) (0.8 * 12);
+        int expectedDmgToVillager = (int) (1.5 * 12);
         // monk must be dead;
-        int expectedDmgToCastle = (int) (0.3 * 14);
-        int expectedDmgToBarrack = (int) (0.7 * 14);
+        int expectedDmgToCastle = (int) (0.1 * 12);
+        int expectedDmgToBarrack = (int) (0.7 * 12);
 
         assertEquals(150 - expectedDmgToInfantry, infantry.getHP());
         assertEquals(100 - expectedDmgToArcher, archer.getHP());
@@ -102,17 +107,17 @@ class InfantryUnitTest {
         assertEquals(1200 - expectedDmgToBarrack, barrack.getHP());
 
         // dont attack if is dead
-        infantrytest.setDead();
+        archertest.setDead();
 
-        infantrytest.attack(infantry);
-        infantrytest.attack(archer);
-        infantrytest.attack(calvary);
-        infantrytest.attack(siege);
-        infantrytest.attack(villager);
-        infantrytest.attack(monk);
+        archertest.attack(infantry);
+        archertest.attack(archer);
+        archertest.attack(calvary);
+        archertest.attack(siege);
+        archertest.attack(villager);
+        archertest.attack(monk);
 
-        infantrytest.attack(castle);
-        infantrytest.attack(barrack);
+        archertest.attack(castle);
+        archertest.attack(barrack);
 
         assertEquals(150 - expectedDmgToInfantry, infantry.getHP());
         assertEquals(100 - expectedDmgToArcher, archer.getHP());
@@ -123,5 +128,6 @@ class InfantryUnitTest {
         assertTrue((!monk.isAlive()) && (0 == monk.getHP()));
         assertEquals(4800 - expectedDmgToCastle, castle.getHP());
         assertEquals(1200 - expectedDmgToBarrack, barrack.getHP());
+
     }
 }

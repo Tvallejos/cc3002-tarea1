@@ -1,4 +1,6 @@
-package abstractClasses;
+package Entity.Buildings;
+
+import Entity.Entity;
 
 /**
  * Building abstract class for attackable buildings
